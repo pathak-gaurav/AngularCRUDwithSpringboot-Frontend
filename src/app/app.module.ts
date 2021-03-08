@@ -1,18 +1,27 @@
+import { EmployeeService } from './employee.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RegisterationComponent } from './registeration/registeration.component';
+import { SearchDeleteComponent } from './search-delete/search-delete.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegisterationComponent,
+    SearchDeleteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
